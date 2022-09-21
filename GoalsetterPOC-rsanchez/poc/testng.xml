@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite data-provider-thread-count="1" name="Goalsetter">
+  <listeners>
+    <listener class-name="Goalsetter.config.report.TestListener"/>
+    <listener class-name="Goalsetter.config.report.ExtentReportListener"/>
+  </listeners>
+
+  <test allow-return-values="true" name="Test">
+
+    <groups>
+      <run>
+        <include name="LOGIN"/>
+      </run>
+    </groups>
+    <packages>
+      <package name="Goalsetter.testCases.*"></package>
+    </packages>
+  </test>
+</suite>
